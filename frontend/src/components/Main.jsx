@@ -152,6 +152,7 @@ const Main = () => {
             <h2 className="text-3xl font-bold">FROM THE RESOURCE CENTER</h2>
           </div>
 
+          <Link to='/discover'>
           <div className="relative h-64 mx-4 md:mx-9 mb-12 rounded-lg overflow-hidden group">
             <div className="absolute inset-0 bg-[url('https://wallpapers.com/images/hd/beautiful-travel-2560-x-1703-wallpaper-gxkaxl0zmx9lpup4.jpg')] bg-cover bg-center transition-transform duration-500 group-hover:scale-110" />
             <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-500 group-hover:bg-opacity-30" />
@@ -163,20 +164,25 @@ const Main = () => {
               </div>
             </div>
           </div>
-
+          </Link>
+          
           <div className="grid md:grid-cols-3 gap-8">
             {blogdata.map((data, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105">
+                <Link to='/discover'>
                 <div className="relative h-48">
                   <img src={data.image} alt={data.title} className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-black bg-opacity-20 transition-opacity duration-300 opacity-0 hover:opacity-100 flex items-center justify-center">
-                    <Button type="primary" className="bg-blue-500">Read More</Button>
+                    <Button type="primary" className="bg-blue-500">Vist</Button>
                   </div>
                 </div>
                 <div className="p-6 space-y-4">
                   <h3 className="text-xl font-semibold">{data.title}</h3>
                   <h5 className="text-gray-600">{data.tagline}</h5>
                 </div>
+
+                </Link>
+
               </div>
             ))}
           </div>
